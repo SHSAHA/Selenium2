@@ -1,0 +1,23 @@
+package package1;
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+
+
+public class VerifyApplicationTitle {
+	
+	
+	@Test
+	public void verifyTitle() {
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.get("https://signup.int.staging.insly.training/signup");
+		
+		String PageTitle = driver.getTitle();
+		System.out.println("PageTitle :"+ PageTitle);
+	}
+	}
+
+

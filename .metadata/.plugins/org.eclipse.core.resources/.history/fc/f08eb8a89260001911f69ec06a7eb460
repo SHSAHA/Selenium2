@@ -1,0 +1,18 @@
+package package1;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SignUp {
+
+	public static void main(String[] args) {
+		// 1. WebDriver defined
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaswata\\Downloads\\New folder\\Selenium2\\Software\\chromedriver.exe");
+			WebDriver driver = new ChromeDriver();
+			
+			//2. Open browser and navigate to page
+			driver.get("https://signup.int.staging.insly.training/signup");
+	}
+	
+
+}

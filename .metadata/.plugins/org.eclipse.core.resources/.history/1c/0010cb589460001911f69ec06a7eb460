@@ -1,0 +1,6 @@
+package package1;
+
+@Test
+public class VerifyApplicationTitle {
+
+}

@@ -1,0 +1,122 @@
+package package1;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class SignUp {
+
+	public static void main(String[] args) {
+		
+		String company = "RRR";
+		String country = "Ecuador";
+		String company_profile = "Software Development Company";
+		String number_of_employees = "11-100";
+		String how_would_you_describe_yourself = "I am a tech guy";
+		String work_email = "shaswatasaha26@gmail.com";
+		String account_manager_name = "shaswata saha";
+		String password = "IloveInsly007";
+		String verifypassword = "IloveInsly007";
+		String phonenumber = "56771780";
+		
+		
+		
+		// 1. WebDriver defined
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaswata\\Downloads\\New folder\\Selenium2\\Software\\chromedriver.exe");
+			WebDriver driver = new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+			
+			//2. Open browser and navigate to page
+			driver.get("https://signup.int.staging.insly.training/signup	");
+			
+			WebElement companyElement = driver.findElement(By.id("broker_name"));
+			companyElement.sendKeys(company);
+			WebElement countryElement = driver.findElement(By.id("broker_address_country"));
+			new Select(countryElement).selectByVisibleText(country);
+			
+			
+			WebElement profileElement = driver.findElement(By.id("prop_company_profile"));
+			new Select(profileElement).selectByVisibleText(company_profile);
+			WebElement employeeElement = driver.findElement(By.id("prop_company_no_employees"));
+			new Select(employeeElement).selectByVisibleText(number_of_employees);
+			WebElement descriptionElement = driver.findElement(By.id("prop_company_person_description"));
+			new Select(descriptionElement).selectByVisibleText(how_would_you_describe_yourself);
+			
+			
+			
+			
+			//Administrator Account Details
+			WebElement emailElement = driver.findElement(By.id("broker_admin_email"));
+			emailElement.sendKeys(work_email);
+			WebElement managerElement = driver.findElement(By.id("broker_admin_name"));
+			managerElement.sendKeys(account_manager_name);
+			new Select(countryElement).selectByVisibleText(country);
+			WebElement passwordElement = driver.findElement(By.id("broker_person_password"));
+			passwordElement.sendKeys(password);
+			WebElement verifypasswordElement = driver.findElement(By.id("broker_person_password_repeat"));
+			verifypasswordElement.sendKeys(verifypassword);
+			WebElement phoneElement = driver.findElement(By.id("broker_admin_phone"));
+			phoneElement.sendKeys(phonenumber);
+			
+			//checkboxes
+			
+			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Terms and conditions'])[2]/following::span[1]")).click();
+			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='privacy policy'])[1]/following::span[1]")).click();
+
+				
+			WebElement privacyElement = driver.findElement(By.linkText("privacy policy"));
+			privacyElement.click();
+			WebElement element = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//div[@id='document-content']//following::div[contains(.,'Revision')]"))));
+		    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		        
+		    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Privacy Policy'])[1]/following::span[1]")).click();
+		    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='terms and conditions'])[1]/following::span[1]")).click();   
+		        
+		      //SignUp button 
+		        driver.findElement(By.id("submit_save")).click();
+		        
+		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://rrr.int.staging.insly.training/login"))) {
+		        	System.out.println("Automation Successful");
+		        } else
+		        {
+		        	System.out.println("Automation Unsuccessful");
+		        }
+		      }
+			
+	
+	
+			
+           
+			
+			
+			
+			
+			
+			
+			
+
+			
+			
+			
+			
+	}
+	
+
+

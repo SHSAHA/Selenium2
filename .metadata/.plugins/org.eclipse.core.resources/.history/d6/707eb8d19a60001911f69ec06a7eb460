@@ -1,0 +1,31 @@
+package package1;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SignUp {
+
+	public static void main(String[] args) {
+		// 1. WebDriver defined
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaswata\\Downloads\\New folder\\Selenium2\\Software\\chromedriver.exe");
+			WebDriver driver = new ChromeDriver();
+			driver.manage().window().maximize();
+			
+			//2. Open browser and navigate to page
+			driver.get("https://signup.int.staging.insly.training/signup");
+			
+			//3. check title 
+			
+			String pageTitle = driver.getTitle();
+			System.out.println("PAGETITLE:" + pageTitle);
+			if (pageTitle == "Sign up and start using") {
+				System.out.println("Page Title Test Passed");
+			} else {
+				System.out.println("Page Title Test Failed");
+			}
+			
+			//4. Check elements on the page
+	}
+	
+
+}

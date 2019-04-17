@@ -1,0 +1,88 @@
+package package1;
+
+import java.io.File;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class SignUp {
+
+	public static void main(String[] args) {
+		
+		String company = "Incly";
+		String country = "Estonia";
+		String address;
+		String company_profile = "Software Development Company";
+		String number_of_employees = "11-100";
+		String how_would_you_describe_yourself = "I am a tech guy";
+		String work_email = "shaswatasaha24@gmail.com";
+		String account_manager_name = "shaswata saha";
+		String password = "IloveInsly";
+		String verifypassword = "IloveInsly";
+		String phonenumber = "56771780";
+		String termsandconditions;
+		String privacypolicy;
+		String data_processing;
+		
+		
+		// 1. WebDriver defined
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaswata\\Downloads\\New folder\\Selenium2\\Software\\chromedriver.exe");
+			WebDriver driver = new ChromeDriver();
+			driver.manage().window().maximize();
+			
+			//2. Open browser and navigate to page
+			driver.get("https://signup.int.staging.insly.training/signup");
+			
+			driver.findElement(By.id("broker_name")).sendKeys(company);
+			new Select(driver.findElement(By.id("broker_address_country"))).selectByVisibleText(country);
+			
+			//check address
+			String pageTitle = driver.getTitle();
+			System.out.println("PAGETITLE:" + pageTitle);
+			if (pageTitle == "Sign up and start using") {
+				System.out.println("Page Title Test Passed");
+			} else {
+				System.out.println("Page Title Test Failed");
+			}
+			
+			new Select(driver.findElement(By.id("prop_company_profile"))).selectByVisibleText(company_profile);
+			new Select(driver.findElement(By.id("prop_company_no_employees"))).selectByVisibleText(number_of_employees);
+			new Select(driver.findElement(By.id("prop_company_person_description"))).selectByVisibleText(how_would_you_describe_yourself);
+			
+			
+			//Administrator Account Details
+			driver.findElement(By.id("broker_admin_email")).sendKeys(work_email);
+			driver.findElement(By.id("broker_admin_name")).sendKeys(account_manager_name);
+			driver.findElement(By.id("broker_person_password")).sendKeys(password);
+			driver.findElement(By.id("broker_person_password_repeat")).sendKeys(verifypassword);
+			driver.findElement(By.id("broker_admin_phone")).sendKeys(phonenumber);
+			
+			// checkboxes
+			driver.findElement(By.xpath(("//input[@type='checkbox']")).click();
+			
+			//screenshots
+			
+			TakesScreenshot t =(TakesScreenshot)driver;
+			File source = t.getScreenshotAs(OutputType.FILE);
+		
+			
+			//SignUp button 
+			driver.findElement(By.id("submit_save")).click();
+			
+			
+			
+			//close
+			driver.quit();
+			
+			
+			
+			
+			
+	}
+	
+
+}

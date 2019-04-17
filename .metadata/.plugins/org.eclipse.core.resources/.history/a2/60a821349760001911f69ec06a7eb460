@@ -1,0 +1,31 @@
+package package1;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+
+public class VerifyApplicationTitle {
+	
+	
+	@Test
+	public void verifyTitle() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaswata\\Downloads\\New folder\\Selenium2\\Software\\chromedriver.exe");
+
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://signup.int.staging.insly.training/signup");
+		
+		String PageTitle = driver.getTitle();
+		System.out.println("PageTitle :"+ PageTitle);
+		
+		String expected_title = "Sign up and start using";
+		
+		//Assert.assertEquals(PageTitle, expected_title);
+		Assert.assertTrue(PageTitle.contains("Sign up and start using"));
+		System.out.println("Page title verified");
+	}
+	}
+
+
