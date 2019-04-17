@@ -24,12 +24,12 @@ public class SignUp {
 
 	public static void main(String[] args) {
 		
-		String company = "eee";
+		String company = "lll";
 		String country = "Ecuador";
 		String company_profile = "Software Development Company";
 		String number_of_employees = "11-100";
 		String how_would_you_describe_yourself = "I am a tech guy";
-		String work_email = "shaswata@gmail.com";
+		String work_email = "shaswatasaha20@gmail.com";
 		String account_manager_name = "shaswata saha";
 		String password = "IloveInsly007";
 		String verifypassword = "IloveInsly007";
@@ -41,7 +41,7 @@ public class SignUp {
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaswata\\Downloads\\New folder\\Selenium2\\Software\\chromedriver.exe");
 			WebDriver driver = new ChromeDriver();
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			
 			//2. Open browser and navigate to page
 			driver.get("https://signup.int.staging.insly.training/signup	");
@@ -92,10 +92,13 @@ public class SignUp {
 		      //SignUp button 
 		        driver.findElement(By.id("submit_save")).click();
 		        
-		      //Snapshots
+		      //Screenshots
+		        Screenshot ts = (Screenshot)driver;
+		        File src = ts.getScreenshotAs(OutputType. FILE); 
+		        	FileUtils. copyFile(src, new File("./Screenshots/insly.png")); 
 		        
 		        
-		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://eee.int.staging.insly.training/login"))) {
+		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://lll.int.staging.insly.training/login"))) {
 		        	System.out.println("Automation Successful");
 		        } else
 		        {

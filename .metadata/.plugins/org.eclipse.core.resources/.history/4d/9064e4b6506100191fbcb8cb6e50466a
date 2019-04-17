@@ -24,12 +24,12 @@ public class SignUp {
 
 	public static void main(String[] args) {
 		
-		String company = "eee";
+		String company = "ooo";
 		String country = "Ecuador";
 		String company_profile = "Software Development Company";
 		String number_of_employees = "11-100";
 		String how_would_you_describe_yourself = "I am a tech guy";
-		String work_email = "shaswata@gmail.com";
+		String work_email = "shaswatasaha20@gmail.com";
 		String account_manager_name = "shaswata saha";
 		String password = "IloveInsly007";
 		String verifypassword = "IloveInsly007";
@@ -95,7 +95,7 @@ public class SignUp {
 		      //Snapshots
 		        
 		        
-		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://eee.int.staging.insly.training/login"))) {
+		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://ooo.int.staging.insly.training/login"))) {
 		        	System.out.println("Automation Successful");
 		        } else
 		        {

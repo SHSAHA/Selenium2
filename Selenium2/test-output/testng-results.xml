@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9959" started-at="2019-04-16T22:36:11Z" finished-at="2019-04-16T22:36:21Z">
+  <suite name="Default suite" duration-ms="8932" started-at="2019-04-17T20:47:49Z" finished-at="2019-04-17T20:47:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9959" started-at="2019-04-16T22:36:11Z" finished-at="2019-04-16T22:36:21Z">
+    <test name="Default test" duration-ms="8932" started-at="2019-04-17T20:47:49Z" finished-at="2019-04-17T20:47:58Z">
       <class name="package1.VerifyApplicationTitle">
-        <test-method status="FAIL" signature="verifyTitle()[pri:0, instance:package1.VerifyApplicationTitle@3b088d51]" name="verifyTitle" duration-ms="9871" started-at="2019-04-16T22:36:11Z" finished-at="2019-04-16T22:36:21Z">
+        <test-method status="FAIL" signature="verifyTitle()[pri:0, instance:package1.VerifyApplicationTitle@3b088d51]" name="verifyTitle" duration-ms="8880" started-at="2019-04-17T20:47:49Z" finished-at="2019-04-17T20:47:58Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>

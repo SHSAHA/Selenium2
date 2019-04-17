@@ -95,7 +95,7 @@ public class SignUp {
 		      //Snapshots
 		        
 		        
-		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://eee.int.staging.insly.training/login"))) {
+		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://ooo.int.staging.insly.training/login"))) {
 		        	System.out.println("Automation Successful");
 		        } else
 		        {
