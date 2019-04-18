@@ -19,23 +19,27 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class SignUp {
-
-	public static void main(String[] args) {
-		
-		String company = "eee";
-		String country = "Ecuador";
-		String company_profile = "Software Development Company";
-		String number_of_employees = "11-100";
-		String how_would_you_describe_yourself = "I am a tech guy";
-		String work_email = "shaswata@gmail.com";
-		String account_manager_name = "shaswata saha";
-		String password = "IloveInsly007";
-		String verifypassword = "IloveInsly007";
-		String phonenumber = "56771780";
-		
-		
+	
+	WebDriver driver;
+	String browserType = "Chrome";
+	String company = "DDD";
+	String country = "Ecuador";
+	String company_profile = "Software Development Company";
+	String number_of_employees = "11-100";
+	String how_would_you_describe_yourself = "I am a tech guy";
+	String work_email = "shaswataG@gmail.com";
+	String account_manager_name = "shaswata saha";
+	String password = "IloveInsly007";
+	String verifypassword = "IloveInsly007";
+	String phonenumber = "56771780";
+	
+	
+	
+    @Test
+	public void automation() {
 		
 		// 1. WebDriver defined
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaswata\\Downloads\\New folder\\Selenium2\\Software\\chromedriver.exe");
@@ -92,16 +96,18 @@ public class SignUp {
 		      //SignUp button 
 		        driver.findElement(By.id("submit_save")).click();
 		        
-		      //Snapshots
+		     
+		        //wait and check URL
 		        
-		        
-		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://eee.int.staging.insly.training/login"))) {
+		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://ddd.int.staging.insly.training/login"))) {
 		        	System.out.println("Automation Successful");
 		        } else
 		        {
 		        	System.out.println("Automation Unsuccessful");
 		        }
-		      }
+		        //close window
+		        driver.quit();
+		        }
 			
 	
 	
