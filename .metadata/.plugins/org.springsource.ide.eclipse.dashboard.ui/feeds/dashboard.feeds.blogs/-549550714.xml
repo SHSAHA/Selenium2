@@ -5,7 +5,65 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2019-04-17T12:50:03Z</updated>
+  <updated>2019-04-18T11:38:45Z</updated>
+  <entry>
+    <title>Spring Cloud Data Flow 2.1.0.M1 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/04/18/spring-cloud-data-flow-2-1-0-m1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Janne Valkealahti</name>
+    </author>
+    <id>tag:spring.io,2019-04-18:3651</id>
+    <updated>2019-04-18T11:38:45Z</updated>
+    <content type="html">&lt;p&gt;The Spring Cloud Data Flow team is pleased to announce the release of a 2.1.0 M1 milestone-release. Follow the Getting Started guides for running on &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/2.1.0.M1/reference/htmlsingle/#getting-started-local"&gt;Local&lt;/a&gt;, &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/2.1.0.M1/reference/htmlsingle/#getting-started-cloudfoundry"&gt;Cloud Foundry&lt;/a&gt;, and &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/2.1.0.M1/reference/htmlsingle/#getting-started-kubernetes"&gt;Kubernetes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;What’s new?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SCDF Helm Chart and Apache Kafka&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;With continued interest from the community, as of v2.0.2, we have now added support to toggle between RabbitMQ and Apache Kafka when using SCDF’s helm chart. Though the chart is in the PR status in Helm repository, &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/2.1.0.M1/reference/htmlsingle/#_installing_the_spring_cloud_data_flow_server_and_required_services"&gt;you could still try it&lt;/a&gt; out and give us feedback. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Docker Compose and Apache Kafka&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To continue with the same trend in regards to Apache Kafka, along with regular Apache Kafka binder properties, we have now also added support for Kafka Streams binder properties; likewise, we have switched to use the official Confluent’s Docker image as part of the Docker Compose &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/2.1.0.M1/reference/htmlsingle/#getting-started-local-deploying-spring-cloud-dataflow-docker-download"&gt;getting-started experience&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Concurrent Launch Throttling for Tasks&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;With the recent feedback from the community concerning the concurrent task launching algorithm, we have redesigned the approach to decide whether or not Tasks are currently running, and if running, how many are concurrently in running state. A more realistic view of what’s actually happening with Tasks is now possible by querying against the runtime status of the Tasks in the underlying platforms (e.g., Local, Cloud Foundry and Kubernetes). You can read all about the new design and the corner cases from the &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/2.1.0.M1/reference/htmlsingle/#spring-cloud-dataflow-task-limit-concurrent-executions"&gt;reference guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Deployer Properties as Dropdown&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A growing number of support cases indicated that it is hard for the developers to discover and then supply the platform-specific deployer properties when deploying streams and tasks. We are fixing that by adding a new dropdown with deployer properties automatically populated based on the platform where SCDF is configured to run. The same also will apply for scenarios when there are 1 or more platforms configured to the single instance of SCDF - dropdown would react to the platform selection. Having this would not only simplify the discovery of how to derive these properties and its purpose but it also automatically creates the necessary prefixes in required by SCDF, so you don’t have to worry about it when deploying streams/tasks. We are rolling it out for Streams in this release and the next milestone will include support for Tasks as well.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://user-images.githubusercontent.com/50398/56348316-137ab480-61be-11e9-9f92-6607b7ec6fc6.png" alt="scdf-local-deployment-properties-1" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Spring Cloud Data Flow Microsite&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The SCDF team takes pride is openly communicating with the community in various forums including StackOverflow, Gitter, GitHub, Twitter, and at times in Email and Zoom calls even.&lt;/p&gt;
+&lt;p&gt;In the years of experience working in this model, we have come to learn that providing samples and documenting all the features in the form of a reference-guide alone is not sufficient. While engaging with the community, we tend to write even more workable code-samples and clarify concepts with extra examples. It has happened so much so that we tend to repeat answering for the same questions frequently, too. &lt;/p&gt;
+&lt;p&gt;Adding to this, in the recent &lt;a href="https://gitter.im/spring-cloud/spring-cloud-stream?at=5c3d1b8020b78635b624166c"&gt;Spring Cloud Stream&lt;/a&gt;, &lt;a href="https://gitter.im/spring-cloud/spring-cloud-task?at=5c3deffdf780a1521f1451f1"&gt;Spring Cloud Task&lt;/a&gt;, and &lt;a href="https://gitter.im/spring-cloud/spring-cloud-dataflow?at=5c3def6bf780a1521f144e41"&gt;Spring Cloud Data Flow&lt;/a&gt; developer surveys, it was evident that our samples, docs, and guides need some improvement.&lt;/p&gt;
+&lt;p&gt;We are determined to improve this! The SCDF Team is working on a more hands-on developer guide that goes into the depth of various concepts, features, deployment options, and among many other topics. We are calling it “Spring Cloud Data Flow Microsite” - a standalone application with all the collateral structured to speak to the developer personas more directly. The larger theme for the 2.1.0 release is just the Microsite - more on this topic in the next milestone - stay tuned!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Switched to ZenHub&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;From a product backlog perspective, we have switched and migrated all the GitHub backlog from Waffle to ZenHub (see: &lt;a href="https://waffle.io/"&gt;reasons&lt;/a&gt;). If you’re interested in following along the product release progress, you could install the ZenHub plugin for the web browser and navigate to ZenHub tab in the SCDF GitHub repository. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stay in touch&lt;/strong&gt;?&lt;/p&gt;
+&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-dataflow"&gt;StackOverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow"&gt;GitHub&lt;/a&gt; or via &lt;a href="https://gitter.im/spring-cloud/spring-cloud-dataflow"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Tools 4.2.1 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/04/18/spring-tools-4-2-1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Martin Lippert</name>
+    </author>
+    <id>tag:spring.io,2019-04-18:3652</id>
+    <updated>2019-04-18T09:16:44Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
+&lt;p&gt;I am happy to announce the 4.2.1 release of the Spring Tools 4 for Eclipse, Visual Studio Code, and Atom.&lt;/p&gt;
+&lt;p&gt;Highlights from this release include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; performance: additional performance and memory footprint improvements to symbol indexing, now eats less memory and is faster while doing the initial indexing run&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; new: content-assist for bean types in Spring XML config files&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; new: content-assist for property names in Spring XML config files&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; new: content-assist for bean references in property definitions in Spring XML config files (very rough early cut, needs a lot more work on proposal content, number of proposals, and sorting)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: empty property values in custom properties not set when launching boot apps (&lt;a href="https://github.com/spring-projects/sts4/issues/275"&gt;#275&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: content-assist doesn&amp;rsquo;t activate (restart) old language servers anymore&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To download the distribution for Eclipse and find links to the marketplace entries for Visual Studio Code and Atom, please go visit:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Tools 4: &lt;a href="https://spring.io/tools/"&gt;https://spring.io/tools/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Detailed changes can be found here: &lt;a href="https://github.com/spring-projects/sts4/wiki/Changelog#2019-04-18-421-release"&gt;https://github.com/spring-projects/sts4/wiki/Changelog#2019-04-18-421-release&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Spring Tools 4.2.2 is scheduled to be released in late May 2019.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>CVE-2019-3799: Spring Cloud Config 2.1.2, 2.0.4, 1.4.6 Released</title>
     <link rel="alternate" href="https://spring.io/blog/2019/04/17/cve-2019-3799-spring-cloud-config-2-1-2-2-0-4-1-4-6-released" />
@@ -1527,39 +1585,5 @@ class UserWithDetailsController(
   &lt;li&gt;It&amp;rsquo;s pretty cool that on April 1, 2019, Spring Boot turned five years! Congrats Spring Boot! Here&amp;rsquo;s to many more happy, &lt;em&gt;bootiful&lt;/em&gt; returns!&lt;/li&gt;
   &lt;li&gt;Check out Richard Seroter&amp;rsquo;s post looking at &lt;a href="https://seroter.wordpress.com/2019/04/03/connecting-your-java-microservices-to-each-other-heres-how-to-use-spring-cloud-stream-with-azure-event-hubs/"&gt;the Spring Cloud Stream binder for Azure Event Hubs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>CVE-2019-3795: Spring Security 4.2.12, 5.0.12, 5.1.5 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/04/05/cve-2019-3795-spring-security-4-2-12-5-0-12-5-1-5-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Josh Cummings</name>
-    </author>
-    <id>tag:spring.io,2019-04-04:3629</id>
-    <updated>2019-04-05T14:38:59Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="https://spring.io/blog/2019/04/03/spring-security-5-1-5-5-0-12-4-2-12-released"&gt;We have released Spring Security 4.2.12, 5.0.12, and 5.1.5&lt;/a&gt; to address &lt;a href="https://pivotal.io/security/cve-2019-3795"&gt;CVE-2019-3795: Insecure Randomness with SecureRandomFactoryBean&lt;/a&gt;. Users are encouraged to update immediately.&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: Microsoft's Kylie Liang and Theresa Nguyen on MIcrosoft's Java and Spring Support</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/04/05/a-bootiful-podcast-microsoft-s-kylie-liang-and-theresa-nguyen-on-microsoft-s-java-and-spring-support" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2019-04-04:3628</id>
-    <updated>2019-04-05T00:02:00Z</updated>
-    <content type="html">&lt;img src="https://pbs.twimg.com/media/D3TS20XX4AAxLRv.jpg:large" &#xD;
-    width ="300"&#xD;
-    style = "float: left; margin-right : 10px; padding-right : 10px " /&gt;
-&lt;p&gt;Hi Spring fans! In this week&amp;rsquo;s episode Josh talks to Microsoft&amp;rsquo;s Kylie Liang and Theresa Nguyen about the Microsoft Java and Spring integrations, the Java ecosystem, open-source, and more.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/liangkylie"&gt;Kylie (right) on Twitter (@liangkylie)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/RockClimberT"&gt;Theresa (left) on Twitter (@RockClimberT)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/starbuxman"&gt;Josh on Twitter (@starbuxman)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=jRgZe7kWDnU"&gt;The &amp;ldquo;Spring Tips&amp;rdquo; screencast introducing the Spring and Microsoft Azure integration&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/600772455%3Fsecret_token%3Ds-dwdd4&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;</content>
   </entry>
 </feed>

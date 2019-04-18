@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
@@ -19,18 +18,20 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class SignUp {
 	
 	WebDriver driver;
 	String browserType = "Chrome";
-	String company = "DDD";
+	String company = "TEREYA";
 	String country = "Ecuador";
 	String company_profile = "Software Development Company";
 	String number_of_employees = "11-100";
 	String how_would_you_describe_yourself = "I am a tech guy";
-	String work_email = "shaswataG@gmail.com";
+	String work_email = "shaswataSahatere@gmail.com";
 	String account_manager_name = "shaswata saha";
 	String password = "IloveInsly007";
 	String verifypassword = "IloveInsly007";
@@ -41,15 +42,10 @@ public class SignUp {
     @Test
 	public void automation() {
 		
-		// 1. WebDriver defined
+		    // WebDriver defined
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaswata\\Downloads\\New folder\\Selenium2\\Software\\chromedriver.exe");
-			WebDriver driver = new ChromeDriver();
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			
-			//2. Open browser and navigate to page
-			driver.get("https://signup.int.staging.insly.training/signup	");
-			
+			// Fill WebElements
 			WebElement companyElement = driver.findElement(By.id("broker_name"));
 			companyElement.sendKeys(company);
 			WebElement countryElement = driver.findElement(By.id("broker_address_country"));
@@ -79,8 +75,7 @@ public class SignUp {
 			WebElement phoneElement = driver.findElement(By.id("broker_admin_phone"));
 			phoneElement.sendKeys(phonenumber);
 			
-			//checkboxes
-			
+			//CheckBoxes
 			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Terms and conditions'])[2]/following::span[1]")).click();
 			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='privacy policy'])[1]/following::span[1]")).click();
 
@@ -96,20 +91,31 @@ public class SignUp {
 		      //SignUp button 
 		        driver.findElement(By.id("submit_save")).click();
 		        
+		       
+		        
 		     
 		        //wait and check URL
-		        
-		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://ddd.int.staging.insly.training/login"))) {
+		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://tereya.int.staging.insly.training/login"))) {
 		        	System.out.println("Automation Successful");
 		        } else
 		        {
 		        	System.out.println("Automation Unsuccessful");
 		        }
-		        //close window
-		        driver.quit();
+		       
 		        }
-			
+ // Open browser and navigate to page
+    @BeforeMethod
+	public void setUp() {
+		driver = utilities.DriverFactory.open(browserType);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.get("https://signup.int.staging.insly.training/signup	");
+		driver.manage().window().maximize();
+	}
 	
+	@AfterMethod
+	public void tearDown() {
+		//driver.quit();
+	}
 	
 			
            

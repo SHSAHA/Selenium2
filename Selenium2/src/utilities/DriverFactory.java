@@ -10,22 +10,23 @@ public class DriverFactory {
 	//This method will return WebDriver object
 
 	public static WebDriver open(String browserType) {
-		if (browserType.equalsIgnoreCase("chrome")) {
+		if (browserType.equalsIgnoreCase("Chrome")) {
 			//code for Chrome
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaswata\\Downloads\\New folder\\Selenium2\\Software\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaswata\\Downloads\\SeleniumProjects\\Software\\chromedriver.exe");
 			 return new ChromeDriver();
 		
 		}
 			
 		else if (browserType.equalsIgnoreCase("IE")){
-			//code for FF
-			System.setProperty("webdriver.ie.driver", "C:\\Users\\shaswata\\Downloads\\New folder\\Selenium2\\Software\\IEDriverServer.exe");
+			//code for IE Driver
+			System.setProperty("webdriver.ie.driver", "C:\\Users\\shaswata\\Downloads\\SeleniumProjects\\Software\\IEDriverServer.exe");
 			 return new InternetExplorerDriver();
 			 
 		}
 		else {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaswata\\Downloads\\New folder\\Selenium2\\Software\\chromedriver.exe");
-			 return new ChromeDriver();
+			//code for Firefox
+			System.setProperty("webdriver.gecko.driver", "C:\\Users\\shaswata\\Downloads\\SeleniumProjects\\Software\\geckodriver.exe");
+			 return new FirefoxDriver();
 			
 		}
 	}

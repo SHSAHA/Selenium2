@@ -5,7 +5,9 @@
     <classes>
       <class name="package1.VerifyApplicationTitle">
         <methods>
+          <include name="setUp"/>
           <include name="verifyTitle"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- package1.VerifyApplicationTitle -->
     </classes>
