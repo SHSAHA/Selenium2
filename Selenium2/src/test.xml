@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Automated Test Suites" parallel="true">
+  <test name="Sign Up Page Tests">
+    <classes>
+      <class name="SmokeTests.ATagsTest" nam="SmokeTests.VerifyApplicationTitle" namee="SmokeTests.CheckTextPresent"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

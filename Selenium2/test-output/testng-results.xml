@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="54101" started-at="2019-04-18T19:25:56Z" finished-at="2019-04-18T19:26:50Z">
+  <suite name="Automated Test Suites" duration-ms="12294" started-at="2019-04-19T13:35:58Z" finished-at="2019-04-19T13:36:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="54101" started-at="2019-04-18T19:25:56Z" finished-at="2019-04-18T19:26:50Z">
-      <class name="package1.SignUp">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:package1.SignUp@33f88ab]" name="setUp" is-config="true" duration-ms="19969" started-at="2019-04-18T19:25:56Z" finished-at="2019-04-18T19:26:16Z">
+    <test name="Sign Up Page Tests" duration-ms="12294" started-at="2019-04-19T13:35:58Z" finished-at="2019-04-19T13:36:10Z">
+      <class name="SmokeTests.ATagsTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:SmokeTests.ATagsTest@56aac163]" name="setUp" is-config="true" duration-ms="9233" started-at="2019-04-19T13:35:58Z" finished-at="2019-04-19T13:36:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="automation()[pri:0, instance:package1.SignUp@33f88ab]" name="automation" duration-ms="33238" started-at="2019-04-18T19:26:16Z" finished-at="2019-04-18T19:26:50Z">
+        <test-method status="PASS" signature="aTagsLinksTest()[pri:0, instance:SmokeTests.ATagsTest@56aac163]" name="aTagsLinksTest" duration-ms="307" started-at="2019-04-19T13:36:07Z" finished-at="2019-04-19T13:36:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- automation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:package1.SignUp@33f88ab]" name="tearDown" is-config="true" duration-ms="833" started-at="2019-04-18T19:26:50Z" finished-at="2019-04-18T19:26:50Z">
+        </test-method> <!-- aTagsLinksTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SmokeTests.ATagsTest@56aac163]" name="tearDown" is-config="true" duration-ms="2694" started-at="2019-04-19T13:36:08Z" finished-at="2019-04-19T13:36:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- package1.SignUp -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- SmokeTests.ATagsTest -->
+    </test> <!-- Sign Up Page Tests -->
+  </suite> <!-- Automated Test Suites -->
 </testng-results>
