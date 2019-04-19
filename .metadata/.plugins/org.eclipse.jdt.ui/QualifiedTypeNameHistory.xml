@@ -9,4 +9,8 @@
 <fullyQualifiedTypeName name="org.openqa.selenium.JavascriptExecutor"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
+<fullyQualifiedTypeName name="org.testng.annotations.BeforeMethod"/>
+<fullyQualifiedTypeName name="org.testng.annotations.AfterMethod"/>
+<fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+<fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
 </qualifiedTypeNameHistroy>

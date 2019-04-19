@@ -5,7 +5,22 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2019-04-18T11:38:45Z</updated>
+  <updated>2019-04-19T01:01:00Z</updated>
+  <entry>
+    <title>A Bootiful Podcast: Pivotal Field CTO and OG Cloud Native Matt Stine on Architecture</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/04/19/a-bootiful-podcast-pivotal-field-cto-and-og-cloud-native-matt-stine-on-architecture" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2019-04-18:3653</id>
+    <updated>2019-04-19T01:01:00Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of a Bootiful Podcast. In this episode, recorded in lovely Johannesburg, South Africa for the SpringOne Tour event, I&amp;rsquo;m joined by my buddy and one of the original cloud natives, Matt Stine!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://twitter.com/mstine"&gt;Matt&amp;rsquo;s Twitter (@mstine)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/607633950%3Fsecret_token%3Ds-89CQm&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;</content>
+  </entry>
   <entry>
     <title>Spring Cloud Data Flow 2.1.0.M1 released</title>
     <link rel="alternate" href="https://spring.io/blog/2019/04/18/spring-cloud-data-flow-2-1-0-m1-released" />
@@ -1555,35 +1570,5 @@ class UserWithDetailsController(
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - April 9th, 2019</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/04/09/this-week-in-spring-april-9th-2019" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2019-04-09:3633</id>
-    <updated>2019-04-09T22:13:21Z</updated>
-    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another wild-and-wacky week of &lt;em&gt;This Week in Spring&lt;/em&gt;! I&amp;rsquo;m in Johannesburg, South Africa where I both spoke at the SpringOne Tour South Africa event and at the Johannesburg Java User Group. Had tons of fun on safari visiting (from the safety of a good deal of distance and an SUV) the utterly astonishing and beautiful - majestic - wildlife here. I can&amp;rsquo;t stress that last part enough. The animals here are so, so, SO breathtaking. I got as close as I ever want to get to an elephant that was like a small house with eyes. Utterly &lt;em&gt;massive&lt;/em&gt;! It towered over buses. When you go into the bush, my tour guide warned, you enter the food chain, and there, we don&amp;rsquo;t figure very high at all. The experience reminded me how insignificant I am and how utterly privileged I am to be here, with you, dear community. We&amp;rsquo;re all pretty lucky. &lt;/p&gt;
-&lt;p&gt;I also really enjoyed meeting some of the local community. My friend, &lt;a href="http://twitter.com/rorypreddy"&gt;Rory Preddy&lt;/a&gt; at Microsoft South Africa, was telling me that the local community here in South Africa is &lt;em&gt;very&lt;/em&gt; small - tens of thousands of professional developers, if that. What the community lacks in quantity they more than made up for, it eems, in quality. &lt;/p&gt;
-&lt;p&gt;What an amazing inspiring few days it&amp;rsquo;s been! Tomorrow, I&amp;rsquo;m off to Mauritius for &lt;a href="https://conference.mscc.mu/"&gt;the MSCC&lt;/a&gt; and then back in South Africa on Friday for the SpringOne Tour Capetown event. This figures to be fun! &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;In last week&amp;rsquo;s installment of &lt;em&gt;A Bootiful Podcast&lt;/em&gt; &lt;a href="https://spring.io/blog/2019/04/05/a-bootiful-podcast-microsoft-s-kylie-liang-and-theresa-nguyen-on-microsoft-s-java-and-spring-support"&gt;I spoke Microsoft&amp;rsquo;s Kylie Liang and Theresa Nguyen on MIcrosoft&amp;rsquo;s Java and Spring Support&lt;/a&gt;. This was a really interesting discussion for me. Azure is getting better and better and even though I try there&amp;rsquo;s something about which I&amp;rsquo;m unaware. I&amp;rsquo;m grateful Kylie and Theresa were able to sit down and educate me.&lt;/li&gt;
-  &lt;li&gt;In yet another unplanned installment of &lt;em&gt;Spring Tips&lt;/em&gt;, &lt;a href="https://spring.io/blog/2019/04/03/spring-tips-webmvc-fn-the-functional-dsl-for-spring-mvc"&gt;I debut WebMvc.fn - the functional DSL for Spring MVC&lt;/a&gt;. Trust me, you&amp;rsquo;ll want to see this!&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/04/04/spring-io-platform-cairo-sr8"&gt;Spring IO Platform Cairo-SR8&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/04/04/spring-io-platform-brussels-sr17"&gt;Spring IO Platform Brussels-SR17&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/04/04/spring-boot-2-1-4-released"&gt;Spring Boot 2.1.4 released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/04/03/spring-boot-2-0-9-released"&gt;Spring Boot 2.0.9 Released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/04/03/spring-boot-1-5-20-available-now"&gt;Spring Boot 1.5.20 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/04/03/spring-security-5-1-5-5-0-12-4-2-12-released"&gt;Spring Security 5.1.5, 5.0.12, 4.2.12 Released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/04/05/cve-2019-3795-spring-security-4-2-12-5-0-12-5-1-5-released"&gt;CVE-2019-3795: Spring Security 4.2.12, 5.0.12, 5.1.5 Released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I really enjoyed this &lt;a href="https://dzone.com/articles/hystrix-vs-sentinel-a-tale-of-two-circuit-breakers"&gt;comparison of Alibaba&amp;rsquo;s Sentinel vs. Netflix&amp;rsquo;s Hystrix&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;This tweet [is everything to me!(&lt;a href="https://twitter.com/springcentral/status/1115162821258559488"&gt;https://twitter.com/springcentral/status/1115162821258559488&lt;/a&gt;) - congratulations Sara Torrey! :-)&lt;/li&gt;
-  &lt;li&gt;This was an intersting interview on &lt;a href="https://www.youtube.com/watch?v=mW0LCHtB7Aw"&gt;Spring Data JDBC with Jens Schauder on the Spring Data team&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://medium.com/buildpacks/cloud-native-buildpacks-hit-beta-4d9f2c85dd22"&gt;Cloud Native Buildpacks Hit Beta &#x1f4a5; – Buildpacks – Medium&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;It&amp;rsquo;s pretty cool that on April 1, 2019, Spring Boot turned five years! Congrats Spring Boot! Here&amp;rsquo;s to many more happy, &lt;em&gt;bootiful&lt;/em&gt; returns!&lt;/li&gt;
-  &lt;li&gt;Check out Richard Seroter&amp;rsquo;s post looking at &lt;a href="https://seroter.wordpress.com/2019/04/03/connecting-your-java-microservices-to-each-other-heres-how-to-use-spring-cloud-stream-with-azure-event-hubs/"&gt;the Spring Cloud Stream binder for Azure Event Hubs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
   </entry>
 </feed>

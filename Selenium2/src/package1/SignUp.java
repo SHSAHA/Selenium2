@@ -26,12 +26,12 @@ public class SignUp {
 	
 	WebDriver driver;
 	String browserType = "Chrome";
-	String company = "TEREYA";
+	String company = "Automation_Guru";
 	String country = "Ecuador";
 	String company_profile = "Software Development Company";
 	String number_of_employees = "11-100";
 	String how_would_you_describe_yourself = "I am a tech guy";
-	String work_email = "shaswataSahatere@gmail.com";
+	String work_email = "shaswataSahate@gmail.com";
 	String account_manager_name = "shaswata saha";
 	String password = "IloveInsly007";
 	String verifypassword = "IloveInsly007";
@@ -45,7 +45,13 @@ public class SignUp {
 		    // WebDriver defined
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaswata\\Downloads\\New folder\\Selenium2\\Software\\chromedriver.exe");
 			
-			// Fill WebElements
+			//Running the Test
+			System.out.println("Running Test");
+			
+			//Check element on the page
+			System.out.println(driver.findElement(By.xpath("/html/body/main/div/div/div/h1")).isDisplayed());
+			
+			// Fill form
 			WebElement companyElement = driver.findElement(By.id("broker_name"));
 			companyElement.sendKeys(company);
 			WebElement countryElement = driver.findElement(By.id("broker_address_country"));
@@ -58,9 +64,7 @@ public class SignUp {
 			new Select(employeeElement).selectByVisibleText(number_of_employees);
 			WebElement descriptionElement = driver.findElement(By.id("prop_company_person_description"));
 			new Select(descriptionElement).selectByVisibleText(how_would_you_describe_yourself);
-			
-			
-			
+				
 			
 			//Administrator Account Details
 			WebElement emailElement = driver.findElement(By.id("broker_admin_email"));
@@ -90,12 +94,9 @@ public class SignUp {
 		        
 		      //SignUp button 
 		        driver.findElement(By.id("submit_save")).click();
-		        
-		       
-		        
-		     
+		      
 		        //wait and check URL
-		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://tereya.int.staging.insly.training/login"))) {
+		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://automationguru	.int.staging.insly.training/login"))) {
 		        	System.out.println("Automation Successful");
 		        } else
 		        {
@@ -106,32 +107,23 @@ public class SignUp {
  // Open browser and navigate to page
     @BeforeMethod
 	public void setUp() {
+    	System.out.println("Starting Test");
 		driver = utilities.DriverFactory.open(browserType);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("https://signup.int.staging.insly.training/signup	");
+		String webUrl = "https://signup.int.staging.insly.training/signup";
+		driver.get(webUrl);
 		driver.manage().window().maximize();
 	}
 	
 	@AfterMethod
 	public void tearDown() {
-		//driver.quit();
+		System.out.println("Closing Test");
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver.close();
 	}
 	
 			
-           
-			
-			
-			
-			
-			
-			
-			
-
-			
-			
-			
-			
-	}
+         }
 	
 
 
