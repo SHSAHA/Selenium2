@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Automated Test Suites" duration-ms="12294" started-at="2019-04-19T13:35:58Z" finished-at="2019-04-19T13:36:10Z">
+  <suite name="Automated Test Suites" duration-ms="10394" started-at="2019-04-19T13:39:24Z" finished-at="2019-04-19T13:39:34Z">
     <groups>
     </groups>
-    <test name="Sign Up Page Tests" duration-ms="12294" started-at="2019-04-19T13:35:58Z" finished-at="2019-04-19T13:36:10Z">
+    <test name="Sign Up Page Tests" duration-ms="10394" started-at="2019-04-19T13:39:24Z" finished-at="2019-04-19T13:39:34Z">
       <class name="SmokeTests.ATagsTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:SmokeTests.ATagsTest@56aac163]" name="setUp" is-config="true" duration-ms="9233" started-at="2019-04-19T13:35:58Z" finished-at="2019-04-19T13:36:07Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:SmokeTests.ATagsTest@56aac163]" name="setUp" is-config="true" duration-ms="9633" started-at="2019-04-19T13:39:24Z" finished-at="2019-04-19T13:39:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="aTagsLinksTest()[pri:0, instance:SmokeTests.ATagsTest@56aac163]" name="aTagsLinksTest" duration-ms="307" started-at="2019-04-19T13:36:07Z" finished-at="2019-04-19T13:36:08Z">
+        <test-method status="PASS" signature="aTagsLinksTest()[pri:0, instance:SmokeTests.ATagsTest@56aac163]" name="aTagsLinksTest" duration-ms="349" started-at="2019-04-19T13:39:34Z" finished-at="2019-04-19T13:39:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aTagsLinksTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:SmokeTests.ATagsTest@56aac163]" name="tearDown" is-config="true" duration-ms="2694" started-at="2019-04-19T13:36:08Z" finished-at="2019-04-19T13:36:10Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SmokeTests.ATagsTest@56aac163]" name="tearDown" is-config="true" duration-ms="348" started-at="2019-04-19T13:39:34Z" finished-at="2019-04-19T13:39:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

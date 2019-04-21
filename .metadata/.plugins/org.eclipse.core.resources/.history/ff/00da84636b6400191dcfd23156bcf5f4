@@ -48,7 +48,6 @@ public class VerifyApplicationTitle {
 		driver.manage().window().maximize();
 	}
 	
-    //Close Page
 	@AfterMethod
 	public void tearDown() {
 		System.out.println("Closing Test");

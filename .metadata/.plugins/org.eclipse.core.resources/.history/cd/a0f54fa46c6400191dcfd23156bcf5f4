@@ -40,7 +40,7 @@ public class SignUp {
 	
 	
     @Test
-	public void Automation() {
+	public void automation() {
 		
 		    // WebDriver defined
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaswata\\Downloads\\New folder\\Selenium2\\Software\\chromedriver.exe");
@@ -51,11 +51,13 @@ public class SignUp {
 			//Check element on the page
 			System.out.println(driver.findElement(By.xpath("/html/body/main/div/div/div/h1")).isDisplayed());
 			
-			// Company
+			// Fill form
 			WebElement companyElement = driver.findElement(By.id("broker_name"));
 			companyElement.sendKeys(company);
 			WebElement countryElement = driver.findElement(By.id("broker_address_country"));
 			new Select(countryElement).selectByVisibleText(country);
+			
+			
 			WebElement profileElement = driver.findElement(By.id("prop_company_profile"));
 			new Select(profileElement).selectByVisibleText(company_profile);
 			WebElement employeeElement = driver.findElement(By.id("prop_company_no_employees"));
@@ -81,7 +83,7 @@ public class SignUp {
 			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Terms and conditions'])[2]/following::span[1]")).click();
 			driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='privacy policy'])[1]/following::span[1]")).click();
 
-			//Privacy Policy
+				
 			WebElement privacyElement = driver.findElement(By.linkText("privacy policy"));
 			privacyElement.click();
 			WebElement element = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//div[@id='document-content']//following::div[contains(.,'Revision')]"))));
@@ -94,7 +96,7 @@ public class SignUp {
 		        driver.findElement(By.id("submit_save")).click();
 		      
 		        //wait and check URL
-		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://automationguru.int.staging.insly.training/login"))) {
+		        if(new WebDriverWait(driver, 20).until(ExpectedConditions.urlToBe("https://automationguru	.int.staging.insly.training/login"))) {
 		        	System.out.println("Automation Successful");
 		        } else
 		        {

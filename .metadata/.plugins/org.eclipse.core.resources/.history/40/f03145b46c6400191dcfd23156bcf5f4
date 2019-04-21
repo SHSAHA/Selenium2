@@ -40,7 +40,7 @@ public class SignUp {
 	
 	
     @Test
-	public void Automation() {
+	public void automation() {
 		
 		    // WebDriver defined
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shaswata\\Downloads\\New folder\\Selenium2\\Software\\chromedriver.exe");

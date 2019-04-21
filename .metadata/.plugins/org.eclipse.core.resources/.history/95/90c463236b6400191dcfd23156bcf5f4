@@ -23,14 +23,10 @@ public class VerifyApplicationTitle {
 		//Running Test
 		System.out.println("Running Test");
 		
-		//Get Title
-		
 		String PageTitle = driver.getTitle();
 		System.out.println("PageTitle :"+ PageTitle);
 		
 		String expected_title = "Sign up and start using";
-		
-		//Assertion
 		
 		Assert.assertEquals(PageTitle, expected_title);
 		//Assert.assertTrue(PageTitle.contains("Insly"));
@@ -48,7 +44,6 @@ public class VerifyApplicationTitle {
 		driver.manage().window().maximize();
 	}
 	
-    //Close Page
 	@AfterMethod
 	public void tearDown() {
 		System.out.println("Closing Test");

@@ -30,8 +30,6 @@ public class VerifyApplicationTitle {
 		
 		String expected_title = "Sign up and start using";
 		
-		//Assertion
-		
 		Assert.assertEquals(PageTitle, expected_title);
 		//Assert.assertTrue(PageTitle.contains("Insly"));
 		//System.out.println("Page title verified");
@@ -48,7 +46,6 @@ public class VerifyApplicationTitle {
 		driver.manage().window().maximize();
 	}
 	
-    //Close Page
 	@AfterMethod
 	public void tearDown() {
 		System.out.println("Closing Test");
